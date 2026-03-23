@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@font-face {
+    font-family: 'Belina';
+    src: url('/fonts/Belina DEMO.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --font-sans: 'Belina', serif;
+    --font-belina: 'Belina', serif;
+}
+
+#main_logo{
+    font-family: Belina;
+    font-size: 80px;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.container{
+    width: 86%;
+    margin: auto;
+}
