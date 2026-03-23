@@ -15,7 +15,7 @@
         </div>
 
         {{-- Right Side --}}
-        <div class="w-[60%] space-y-4">
+        <div class="w-[60%] space-y-6">
 
             <div class="shadow hover:shadow-2xl flex items-center gap-4 py-6 px-4 hover:bg-[#ec6f53] hover:scale-102 transition duration-300 cursor-pointer">
     <span class="text-[#f12e07] text-3xl">01</span>
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div>
-                <a class="text-2xl p-2 px-5 bg-[#f06448] rounded-[20px] hover:bg-[#9aee8f]" href="">Book a consultant</a>
+                <a class="text-2xl text-amber-50 p-2 px-5 bg-[#f06448] rounded-[20px] hover:bg-[#9aee8f] hover:text-black " href="/booking">Book a consultant</a>
             </div>
 
         </div>

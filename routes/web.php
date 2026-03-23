@@ -34,4 +34,14 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
+Route::get('/booking', function () {
+    return view('booking.index');
+});
+
+Route::get('/booking/create', function () {
+    return view('booking.create');
+});
+
+
+
 
