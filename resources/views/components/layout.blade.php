@@ -11,7 +11,10 @@
 
 <body>
     {{-- CODE IT --}}
-<h1 class="text-center text-[80px] font-light cursor-pointer">CODE IT</h1>
+   <div class="flex justify-center items-center pt-7 pb-6">
+    <img class="w-[300px]" src="https://codeit.com.np/storage/01KK0WD02GQYECHKK844MYEHN3.png" alt="Code It Logo">
+</div>
+
     <header class="bg-white shadow-md sticky top-0 z-50 container">
         <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-center gap-8 container">
             <a href="/" class="text-sm font-semibold text-black  hover:text-orange-500 transition">Home</a>
