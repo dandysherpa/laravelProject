@@ -33,3 +33,5 @@ Route::get('/intern-partners', function () {
 Route::get('/contact-us', function () {
     return view('contact-us');
 });
+
+

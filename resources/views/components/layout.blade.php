@@ -18,7 +18,7 @@
             <a href="/all-courses" class="text-sm font-semibold text-black hover:text-orange-500 transition">All
                 Courses</a>
             <a href="/upcoming-classes"
-                class="text-sm font-semibold text-black bg-orange-500 px-4 py-2 rounded-full hover:text-white transition">Upcoming
+                class="text-sm font-semibold text-black bg-[#f06448] px-4 py-2 rounded-full hover:text-white transition">Upcoming
                 Classes</a>
             <a href="/testimonials"
                 class="text-sm font-semibold text-black hover:text-orange-500 transition">Testimonials</a>
