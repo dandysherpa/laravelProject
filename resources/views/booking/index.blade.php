@@ -7,7 +7,7 @@
 
             </div>
             <div class="container">
-                <table>SN</table>
+                <table class="border w-full">SN</table>
 
             </div>
 

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Booking;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -40,6 +42,18 @@ Route::get('/booking', function () {
 
 Route::get('/booking/create', function () {
     return view('booking.create');
+});
+
+Route::post('/booking/store', function (Request $request) {
+    $booking = new Booking();
+    $booking->name = $request->full_name;
+    $booking->email = $request->email;
+    $booking->phone = $request->phone;
+    $booking->subject = $request->subject;
+    $booking->request = $request->your_request;
+    $booking->save();
+
+    return redirect("/booking/create");
 });
 
 
