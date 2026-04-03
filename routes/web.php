@@ -37,7 +37,8 @@ Route::get('/contact-us', function () {
 });
 
 Route::get('/booking', function () {
-    return view('booking.index');
+    $bookings = Booking::all();
+    return view('booking.index', compact("bookings"));
 });
 
 Route::get('/booking/create', function () {
@@ -52,8 +53,10 @@ Route::post('/booking/store', function (Request $request) {
     $booking->subject = $request->subject;
     $booking->request = $request->your_request;
     $booking->save();
+    toast("Your request has been submitted.", "success");
 
     return redirect("/booking/create");
+
 });
 
 

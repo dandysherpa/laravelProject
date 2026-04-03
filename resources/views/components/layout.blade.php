@@ -34,6 +34,8 @@
                 Us</a>
         </nav>
     </header>
+    @include('sweetalert::alert')
+
     <main>
         {{ $slot }}
     </main>
