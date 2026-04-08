@@ -26,10 +26,18 @@
                                 <td class="px-4 py-3 text-gray-500">{{ $booking->subject }}</td>
                                 <td class="px-4 py-3">
                                     <div class="flex gap-2">
-                                        <a href="#"
+                                        {{--create a booking id to edit as well like delete to pass the individual id--}}
+                                        <a href="/booking/edit/{{$booking->id}}"
                                             class="px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-600 border border-blue-200 hover:bg-blue-100">Edit</a>
-                                        <button
+                                        <form action="/booking/delete/{{$booking->id}}" method="post"> {{--booking id represents each individual id that we pull up from the data base to delete
+--}}
+
+                                            @csrf {{-- csrf token for security --}}
+
+                                            @method("delete") {{--we use delete method--}}
+                                            <button type="submit"
                                             class="px-3 py-1 text-xs rounded-md bg-red-50 text-red-600 border border-red-200 hover:bg-red-100">Delete</button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>
