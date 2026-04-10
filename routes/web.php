@@ -1,40 +1,19 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('/all-courses', function () {
-    return view('all-courses');
-});
-
-Route::get('/upcoming-classes', function () {
-    return view('upcoming-classes');
-});
-
-Route::get('/testimonials', function () {
-    return view('testimonials');
-});
-
-Route::get('/mentors', function () {
-    return view('mentors');
-});
-
-Route::get('/recorded-videos', function () {
-    return view('recorded-videos');
-});
-
-Route::get('/intern-partners', function () {
-    return view('intern-partners');
-});
-
-Route::get('/contact-us', function () {
-    return view('contact-us');
-});
+Route::get('/', [PageController::class, 'index']);
+Route::get('/all-courses', [PageController::class, 'allCourses']);
+Route::get('/upcoming-classes', [PageController::class, 'upcomingClasses']);
+Route::get('/testimonials', [PageController::class, 'testimonials']);
+Route::get('/mentors', [PageController::class, 'mentors']);
+Route::get('/recorded-videos', [PageController::class, 'recordedVideos']);
+Route::get('/intern-partners', [PageController::class, 'internPartners']);
+Route::get('/contact-us', [PageController::class, 'contactUs']);
 
 Route::get('/booking', function () {
     $bookings = Booking::all();
@@ -44,6 +23,7 @@ Route::get('/booking', function () {
 Route::get('/booking/create', function () {
     return view('booking.create');
 });
+
 
 
 
@@ -81,14 +61,13 @@ Route::delete('/booking/delete/{id}', function ($id) {
     //$id came from the npassing funtion above
     Booking::find($id)->delete();
     toast("Booking has been deleted.", "success");
-//once that is done redirect sends it back to the page
+    //once that is done redirect sends it back to the page
     return redirect("/booking");
-
 });
 //create a seperate route for edit
 Route::get('/booking/edit/{id}', function ($id) {
     //create a variable and send as compact side note: create blade and edit blade wwill be the same , only diffference is to change the booking edit
-   $booking = Booking::find($id); //this is the function to call from the data base and show in the display find
-   return view("/booking.edit",compact("booking")); //return view has to go to booking edit and the compact is to show the $boooking name booking email etc
+    $booking = Booking::find($id); //this is the function to call from the data base and show in the display find
+    return view("/booking.edit", compact("booking")); //return view has to go to booking edit and the compact is to show the $boooking name booking email etc
 
 });
